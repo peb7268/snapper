@@ -4,6 +4,9 @@ controllers.controller('DashCtrl', function($scope, $http) {
   window.app_$scope = $scope;
   window.$http  = $http;
   
+  /*
+  ** Get the pages list from WP
+  */
   function init(){
     $http({
        method : 'POST',
@@ -42,7 +45,8 @@ controllers.controller('DashCtrl', function($scope, $http) {
   }
 
   function onSuccess(imageData) {
-      $scope.imgURI = "data:image/jpeg;base64," + imageData;
+      $scope.imageSnapped = true;
+      $scope.imgURI       = "data:image/jpeg;base64," + imageData;
       $scope.$http.post('http://timsautoupholstery.com/wp-content/themes/MobileWorld/snapper-processor.php', {image: $scope.imgURI});
       $scope.$apply();
   }
