@@ -1,0 +1,20 @@
+<ion-view view-title="Snapper!">
+  <ion-content class="padding">
+    <a href="#" class="camera btn" ng-click="snapPic($event)">
+      <i class="ion-social-instagram"></i>
+    </a>
+    <div id="imgResult">
+      <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+      <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+    </div>
+	
+	<div id="wp_pages" class="list" ng-show='pages'>
+	  <label class="item item-input item-select">
+	    <div class="input-label">Pages</div>
+	    <select>
+	      <option ng-repeat="page in pages">{{page.title}}</option>
+	    </select>
+	  </label>
+	</div>
+  </ion-content>
+</ion-view>

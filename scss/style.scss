@@ -1,0 +1,22 @@
+.camera  i {
+    display: block;
+    margin: 50px auto;
+    color: #333;
+    font-size: 48pt;
+    width: 48px;
+}
+#imgResult {
+	margin: 0 auto;
+	width: 90%;
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+#wp_pages {
+	margin: 50px auto;
+	width: 30%;
+	max-width: 300px;
+}
